@@ -55,7 +55,7 @@ border-radius: 3px;
   }
 }
 .App.dark {
-  --font-color: rgb(255, 255, 255);
+  --font-color: rgb(177, 29, 29);
   --background: rgb(45, 4, 68);
   --background-light: rgb(101, 101, 101);
   transition: all 0.3s;
