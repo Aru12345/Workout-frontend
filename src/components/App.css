@@ -14,15 +14,33 @@
 }
 
 .App-header {
-  background-color: #692a9c;
-  min-height: 14vh;
+  background-color: #6721a0;
+  min-height: 10vh;
   display: flex;
   padding-left: 10%;
   font-size: calc(8px + 2vmin);
   color: white;
   font-family: monospace;
  font-style: italic;
+ 
 }
+.App-header button{
+ margin-left: 30%;
+ width: 15%;
+ height: 30%;
+margin-top: 3%;
+background-color: #9861ce; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 3px;
+}
+
+
 
 .App-link {
   color: #61dafb;
@@ -35,4 +53,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.App.dark {
+  --font-color: rgb(255, 255, 255);
+  --background: rgb(45, 4, 68);
+  --background-light: rgb(101, 101, 101);
+  transition: all 0.3s;
 }

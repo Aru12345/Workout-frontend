@@ -1,13 +1,14 @@
 import React from "react";
+import styled from "styled-components";
 
-function Header() {
+function Header({ isDarkMode, onDarkModeClick }) {
   return (
-    <header>
-      
-      <button >
-       Mode
+    <>
+        
+      <button onClick={onDarkModeClick} >
+      {isDarkMode ? "Dark" : "Light"} Mode
       </button>
-    </header>
+      </>
   );
 }
 
