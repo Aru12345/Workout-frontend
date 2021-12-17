@@ -26,8 +26,8 @@ background-image: linear-gradient(to right, purple, blue);
   color: white;
   font-family: monospace;
  font-style: italic;
- position:absolute;
- position:absolute;
+ position:relative;
+ 
  top:0px;
  right:0px;
 
