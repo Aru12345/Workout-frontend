@@ -1,13 +1,23 @@
 import React from "react";
 import Type from './Type';
 import ExerciseCard from "./ExerciseCard";
-function ExerciseContainer(){
+function ExerciseContainer({exercises}){
     return(
-<>
-<Type />
-<ExerciseCard />
-<h2>Exercise Container</h2>
-</>
-    )
+        
+        <ul className="cards">
+      {exercises.map((exercise) => {
+        return (
+          <ExerciseCard
+            key={exercise.id}
+            exercise={exercise}
+            
+            
+          />
+        );
+      })}
+    </ul>
+        
+        
+          )
 }
 export default ExerciseContainer;
