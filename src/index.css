@@ -1,2 +1,30 @@
+.card {
+    display: flex;
+    
+    padding: 25px;
+   
+    
+    transition: 0.3s;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    height: 450px;
+    
+    overflow-x: auto;
+    background-color: rgb(17, 150, 173);
+   color: white;
+    display: inline-block;
+    border-radius: 6px;
+    
+}
+  
+  .card img {
+    height: 50%;
+    width: 95%;
+    padding: 1%;
+    border-radius: 6px;
+  }
 
-
+  
+  
+  
