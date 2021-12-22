@@ -1,14 +1,14 @@
 import React from "react";
 import PlanCard from "./PlanCard";
-function PlanContainer({plans}){
+function PlanContainer({listedPlans}){
     return(
         <>
-        <ul className="plancards">
-      {plans.map((plan) => {
+     <ul className="cards">
+      {listedPlans.map((listedPlan) => {
         return (
           <PlanCard
-            key={plan.id}
-            plan={plan}
+            key={listedPlan.id}
+            listedPlan={listedPlan}
             
             
           />

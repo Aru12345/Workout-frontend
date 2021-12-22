@@ -1,17 +1,19 @@
 import React from "react";
-function PlanCard({plan}){
-    const { id, name,equip, duration,exercises,notes} = plan;
+function PlanCard({listedPlan}){
+    const { id, planname,equip, duration,exercises,notes} = listedPlan;
     return(
      
+       <>
         <p className="plancard">
-            <h3>Name-{name}</h3>
+            <h3>Name-{planname}</h3>
             <h3>Equipment-{equip}</h3>
             <h3>Duration-{duration}</h3>
             <h3>Exercise-{exercises}</h3>
-            <h3>Note- {notes}</h3>
+            <h3>Notes- {notes}</h3>
 
 
         </p>
+       </>
         
     )
     

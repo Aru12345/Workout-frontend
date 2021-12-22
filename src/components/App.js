@@ -27,17 +27,20 @@ function App() {
    const displayedExercises = exercises.filter((exercise) => {
     return exercise.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
- 
+
   useEffect(()=>{
     fetch(planApi)
     .then(res=>res.json())
     .then(planData=>{
       setPlans(planData)
     })
-  })
+  },[])
+
   const displayedPlans=plans.filter((plan)=>{
-    return plan.name.toLowerCase()
+    return plan.planname
   })
+ 
+  
   return (
     <div className='App'>
        <Header  />
@@ -45,7 +48,7 @@ function App() {
        <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
        <ExerciseContainer  exercises={displayedExercises}  />
        <Form />
-       <PlannerContainer plans={displayedPlans} />
+       <PlannerContainer listedPlans={displayedPlans}/>
       
 
     </div>
