@@ -7,7 +7,7 @@ import Form from './Form';
 import ExerciseContainer from './ExerciseContainer';
 import styled from "styled-components";
 import Search from './Search';
-
+import PlannerContainer from './PlannerContainer';
 
 const exerciseApi="http://localhost:3000/exercises"
 function App() {
@@ -30,10 +30,11 @@ function App() {
   return (
     <div className='App'>
        <Header  />
-       <Form />
+       
        <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
        <ExerciseContainer  exercises={displayedExercises}  />
-    
+      <Form />
+     <PlannerContainer />
       
 
     </div>
