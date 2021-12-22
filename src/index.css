@@ -45,4 +45,25 @@ input {
   width: 95%;
 }
   
+.plancard{
+  
+    display: flex;
+    
+    padding: 25px;
+   
+    
+    transition: 0.3s;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    height: 350px;
+    
+    overflow-x: auto;
+    background-color: rgb(13, 207, 241);
+   color: white;
+    display: inline-block;
+    border-radius: 6px;
+    
+
+}
   

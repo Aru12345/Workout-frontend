@@ -1,8 +1,20 @@
 import React from "react";
-function PlanContainer(){
+import PlanCard from "./PlanCard";
+function PlanContainer({plans}){
     return(
         <>
-        <h1>Planner</h1>
+        <ul className="plancards">
+      {plans.map((plan) => {
+        return (
+          <PlanCard
+            key={plan.id}
+            plan={plan}
+            
+            
+          />
+        );
+      })}
+    </ul>
         </>
     )
 }
