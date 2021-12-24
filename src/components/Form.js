@@ -1,44 +1,44 @@
 import React,{useState} from "react";
-function Form(){
- const[planName,setPlanName]=useState(" ")
- const[equip,setEquip]=useState("")
- const[duration,setDuration]=useState("")
- const[workouts,setWorkouts]=useState("")
- const[notes,setNotes]=useState("")
- const changePlan = (e) =>{
-     setPlanName(e.target.value)
-     
- }
- const changeEquip=(e)=>{
-     setEquip(e.target.value)
- }
- const changeDuration = (e) =>{
-     setDuration(e.target.value)
- }
- const changeWorkouts= (e) =>{
-    setWorkouts(e.target.value)
+function Form({addPlan}){
+const[formData,setFormData]=useState({
+    planname:'',
+    equi:'',
+    duration:'',
+    exercise:'',
+    note:''
+})
+
+function handleChange(e){
+    console.log(e.target.name)
+    console.log(e.target.value)
+    setFormData({
+        ...formData,
+        [e.target.name]:e.target.value
+    })
 }
-const changeNotes = (e) =>{
-    setNotes(e.target.value)
+
+function handleSubmit(e){
+    e.preventDefault()
+    addPlan(formData)
 }
 
     return(
-       <form>
+       <form onSubmit={handleSubmit}>
            <h2>Build your Workout</h2>
            <label>Name:</label>
-           <input type="text" name="Name" aria-label="name" value={planName} onChange={changePlan}  ></input>
+           <input type="text" name="planname" aria-label="name" value={formData.planname} onChange={handleChange}  ></input>
            
            <label>Equipment:</label>
-           <input type="text" name="equipment" aria-label="equipment" value={equip} onChange={changeEquip}></input>
+           <input type="text" name="equi" aria-label="equip" value={formData.equi} onChange={handleChange} ></input>
            
            <label>Duration:</label>
-           <input type="text" name="duration" aria-label="duration" value={duration} onChange={changeDuration} ></input>
+           <input type="text" name="duration" aria-label="duration" value={formData.duration}  onChange={handleChange}></input>
            
            <label>Exercises:</label>
-           <input type="text" name="exercise" aria-label="exercise" value={workouts} onChange={changeWorkouts} ></input>
+           <input type="text" name="exercise" aria-label="exercise" value={formData.exercise} onChange={handleChange} ></input>
            
            <label>Notes:</label>
-           <input type="text" name="note" aria-label="note" value={notes} onChange={changeNotes} ></input>
+           <input type="text" name="note" aria-label="note" value={formData.note} onChange={handleChange} ></input>
           
            <input type="submit" />
           
