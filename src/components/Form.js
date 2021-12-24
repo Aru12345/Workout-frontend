@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-function Form({addPlan}){
+const planApi="http://localhost:3000/plans"
+function Form({onAddPlan}){
 const[formData,setFormData]=useState({
     planname:'',
     equi:'',
@@ -8,19 +9,33 @@ const[formData,setFormData]=useState({
     note:''
 })
 
-function handleChange(e){
-    console.log(e.target.name)
-    console.log(e.target.value)
+function handleChange(event) {
     setFormData({
-        ...formData,
-        [e.target.name]:e.target.value
-    })
-}
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
 
-function handleSubmit(e){
-    e.preventDefault()
-    addPlan(formData)
-}
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const newPlan ={
+        ...formData
+    };
+
+    fetch("http://localhost:3000/plans", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newPlan),
+    })
+      .then((r) => r.json())
+      .then(onAddPlan);
+    
+
+  }
+  
 
     return(
        <form onSubmit={handleSubmit}>

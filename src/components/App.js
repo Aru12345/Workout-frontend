@@ -40,16 +40,18 @@ function App() {
     return plan.planname
   })
  
-  function addPlan(newPlan){
-    setPlans([newPlan,...plans])
+  function handleAddPlan(newPlan) {
+    setPlans([...plans, newPlan]);
   }
+  
+  
   return (
     <div className='App'>
        <Header  />
        
        <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
        <ExerciseContainer  exercises={displayedExercises}  />
-       <Form addPlan={addPlan}/>
+       <Form onAddPlan={handleAddPlan}/>
        <PlannerContainer listedPlans={displayedPlans}/>
       
 
