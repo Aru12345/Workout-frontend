@@ -4,10 +4,12 @@ import React,{useState,useEffect} from 'react';
 import Header from './Header';
 import Form from './Form';
 import ExerciseContainer from './ExerciseContainer';
-import styled from "styled-components";
+import Home from './Home';
 import Search from './Search';
 import PlannerContainer from './PlannerContainer';
 import Utilities from './ Utilities';
+import { Route,Switch } from 'react-router-dom';
+
 
 const exerciseApi="http://localhost:3000/exercises"
 const planApi="http://localhost:3000/plans"
@@ -49,13 +51,23 @@ function App() {
   return (
     <div className='App'>
        <Header  />
-       
-       <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-       <ExerciseContainer  exercises={displayedExercises}  />
-       <Form onAddPlan={handleAddPlan}/>
-       <PlannerContainer listedPlans={displayedPlans}/>
-       <Utilities />
+    <Switch>
+      <Route path="/">
+        <Home />
 
+      </Route>
+      <Route path="/exercises">
+             <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+             <ExerciseContainer  exercises={displayedExercises}  />
+      </Route>
+      <Route path="/plans/new">
+            <Form onAddPlan={handleAddPlan}/>
+            <PlannerContainer listedPlans={displayedPlans}/>
+      </Route> 
+      <Route path="/utilities/new">
+        <Utilities />
+      </Route>
+      </Switch>
     </div>
   );
 }
