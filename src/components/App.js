@@ -13,6 +13,7 @@ import { Route,Switch } from 'react-router-dom';
 
 const exerciseApi="http://localhost:3000/exercises"
 const planApi="http://localhost:3000/plans"
+
 function App() {
   const [exercises,setExercises]=useState([]);
   const[searchTerm,setSearchTerm]=useState("");
@@ -52,10 +53,7 @@ function App() {
     <div className='App'>
        <Header  />
     <Switch>
-      <Route path="/">
-        <Home />
-
-      </Route>
+      
       <Route path="/exercises">
              <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
              <ExerciseContainer  exercises={displayedExercises}  />
@@ -66,6 +64,10 @@ function App() {
       </Route> 
       <Route path="/utilities/new">
         <Utilities />
+      </Route>
+      <Route path="/">
+        <Home />
+
       </Route>
       </Switch>
     </div>
