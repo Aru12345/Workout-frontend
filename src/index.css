@@ -66,4 +66,63 @@ input {
     
 
 }
-  
+
+.homeCards{
+  display: flex;
+}
+
+.homeCards img {
+    height: 60%;
+    width: 65%;
+    padding: 3%;
+    justify-content: center;
+  }
+
+
+.exCard{
+  border: solid;
+    border-color: #684638f5;
+    padding: 50px;
+    
+    
+    transition: 0.3s;
+    margin: 30px;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    
+    overflow-x: auto;
+    background-color: rgb(238, 230, 230);
+}
+
+.plCard{
+  border: solid;
+    border-color: #684638f5;
+    padding: 50px;
+    
+    
+    transition: 0.3s;
+    margin: 30px;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    
+    overflow-x: auto;
+    background-color: rgb(238, 230, 230);
+}
+
+.ulCard{
+  border: solid;
+    border-color: #684638f5;
+    padding: 50px;
+    
+    
+    transition: 0.3s;
+    margin: 30px;
+    text-align: center;
+    width: 280px;
+    height: 400px;
+    
+    overflow-x: auto;
+    background-color: rgb(238, 230, 230);
+}
