@@ -1,28 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink} from "react-router-dom"
-//import styled from "styled-components";
+
+
 
 const linkStyles = {
   display: "inline-block",
-  width: "50px",
-  padding: "12px",
-  margin: "0 6px 6px",
-  background: "blue",
+  width: "170px",
+  padding: "15px",
+  margin: "0px 22px 0px 2px",
+  background:"#996DEC",
   textDecoration: "none",
   color: "white",
-};
+  fontSize:"20px",
+  fontFamily:"serif",
+  
+  
+  
+  
+}
 
 function Header(props) {
   return (
-    <>
+    <HeaderContainer>
     <h1>Welcome to My Fitness</h1>
     <NavLink
         to="/"
         exact
+        
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "#4E0099",
         }}
       >
         Home
@@ -32,37 +40,53 @@ function Header(props) {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "#4E0099",
         }}
-      >
-        About
+      >Search Exercises
       </NavLink>
       <NavLink
         to="/plans/new"
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "#4E0099",
         }}
       >
-        Plans
+        Build Your Workout
       </NavLink>
       <NavLink
         to="/utilities/new"
         exact
         style={linkStyles}
         activeStyle={{
-          background: "darkblue",
+          background: "#4E0099",
         }}
       >
-        Utilities
+         Use Utilities
       </NavLink>
 
-      </>
+      </HeaderContainer>
   );
 }
 
 
 export default Header;
 
+const HeaderContainer = styled.div`
+padding-bottom:1%;
+background:#6E2FD1;
+text-align:center;
+& h1{
+  width:100%;
+  text-align:center;
+  margin-top: 0px;
+  text-transform:uppercase;
+  font-family:monospace;
+  font-style: italic;
+  color:white;
+  font-size:370%;
+  padding-top:1%;
+  padding-bottm:2%
 
+}
+`
