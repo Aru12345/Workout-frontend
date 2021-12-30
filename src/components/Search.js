@@ -1,8 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 function Search({searchTerm,onSearchChange}) {
     return (
-      <div className="searchbar">
-        <label htmlFor="search"><h4>Search Exercise:</h4></label>
+      <SearchBar>
+        <label htmlFor="search"><h2>Search Exercise:</h2></label>
         <input
           type="text"
           id="search"
@@ -10,7 +11,25 @@ function Search({searchTerm,onSearchChange}) {
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
         />
-      </div>
+      </SearchBar>
     );
   }
 export default Search;
+
+const SearchBar=styled.div`
+& h2{
+  
+  display: flex;
+  padding: 0 0 0 1%;
+}
+& input{
+  padding: 0.25rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2em;
+  transition: all 0.2s;
+  width: 90%;
+  margin:0 0 0 1%
+}
+
+`
