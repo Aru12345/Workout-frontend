@@ -9,6 +9,7 @@ import Search from './Search';
 import PlannerContainer from './PlannerContainer';
 import Utilities from './ Utilities';
 import { Route,Switch } from 'react-router-dom';
+import styled from 'styled-components';
 
 
 const exerciseApi="http://localhost:3000/exercises"
@@ -50,7 +51,7 @@ function App() {
   
   
   return (
-    <div className='App'>
+    <AppContainer>
        <Header  />
     <Switch>
       
@@ -70,9 +71,13 @@ function App() {
 
       </Route>
       </Switch>
-    </div>
+    </AppContainer>
   );
 }
 
 
 export default App;
+
+const AppContainer =styled.div`
+background:#F3E7FE
+`
