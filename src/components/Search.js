@@ -28,7 +28,7 @@ const SearchBar=styled.div`
   font-family: inherit;
   font-size: 1.2em;
   transition: all 0.2s;
-  width: 90%;
+  width: 97%;
   margin:0 0 0 1%
 }
 
