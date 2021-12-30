@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-const planApi="http://localhost:3000/plans"
+import styled from "styled-components";
 function Form({onAddPlan}){
 const[formData,setFormData]=useState({
     planname:'',
@@ -38,8 +38,9 @@ function handleSubmit(event) {
   
 
     return(
+      <FormContainer>
        <form onSubmit={handleSubmit}>
-           <h2>Build your Workout</h2>
+           <h3>Build your Workout</h3>
            <label>Name:</label>
            <input type="text" name="planname" aria-label="name" value={formData.planname} onChange={handleChange}  ></input>
            
@@ -55,9 +56,44 @@ function handleSubmit(event) {
            <label>Notes:</label>
            <input type="text" name="note" aria-label="note" value={formData.note} onChange={handleChange} ></input>
           
-           <input type="submit" />
+           <input class="submit" type="submit" />
           
        </form>
+       </FormContainer>
     )
 }
 export default Form;
+
+const FormContainer=styled.div`
+
+
+width:35%;
+border-radius:5px;
+margin:auto;
+
+& h3{
+  text-align:center;
+  text-transform:uppercase;
+  font-family:"Times New Roman";
+}
+& input[type=text] {
+  width: 100%;
+  padding: 6px 24px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+& input[type=submit] {
+  width: 40%;
+  background-color: #4E0099;
+  color: white;
+  padding: 10px 16px ;
+  margin: 6px 0;
+  border: none;
+  border-radius: 4px;
+  
+}
+
+`
