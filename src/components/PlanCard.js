@@ -1,10 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 function PlanCard({listedPlan}){
     const { id, planname,equip, duration,exercises,notes} = listedPlan;
     return(
      
        <>
-        <p className="plancard">
+        <PlanList>
             <h3>Name-{planname}</h3>
             <h3>Equipment-{equip}</h3>
             <h3>Duration-{duration}</h3>
@@ -12,10 +13,25 @@ function PlanCard({listedPlan}){
             <h3>Notes- {notes}</h3>
 
 
-        </p>
+        </PlanList>
        </>
         
     )
     
 }
 export default PlanCard;
+
+const PlanList=styled.div`
+display: inline-block;
+text-align: center;
+width: 250px;
+height: 290px;
+margin:25px;
+margin-top: 70px;
+padding:15px ;
+
+box-shadow: 10px 10px 8px #888888;
+border-radius:5px;
+color:white;
+background:#996DEC;
+`

@@ -34,6 +34,8 @@ function handleSubmit(event) {
       .then(onAddPlan);
     
 
+    
+
   }
   
 
@@ -65,8 +67,6 @@ function handleSubmit(event) {
 export default Form;
 
 const FormContainer=styled.div`
-
-
 width:35%;
 border-radius:5px;
 margin:auto;
@@ -95,5 +95,4 @@ margin:auto;
   border-radius: 4px;
   
 }
-
 `
