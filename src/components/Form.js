@@ -1,12 +1,13 @@
 import React,{useState} from "react";
 import styled from "styled-components";
+
 function Form({onAddPlan}){
 const[formData,setFormData]=useState({
     planname:'',
-    equi:'',
+    equip:'',
     duration:'',
-    exercise:'',
-    note:''
+    exercises:'',
+    notes:''
 })
 
 function handleChange(event) {
@@ -47,20 +48,22 @@ function handleSubmit(event) {
            <input type="text" name="planname" aria-label="name" value={formData.planname} onChange={handleChange}  ></input>
            
            <label>Equipment:</label>
-           <input type="text" name="equi" aria-label="equip" value={formData.equi} onChange={handleChange} ></input>
+           <input type="text" name="equip" aria-label="equip" value={formData.equip} onChange={handleChange} ></input>
            
            <label>Duration:</label>
            <input type="text" name="duration" aria-label="duration" value={formData.duration}  onChange={handleChange}></input>
            
            <label>Exercises:</label>
-           <input type="text" name="exercise" aria-label="exercise" value={formData.exercise} onChange={handleChange} ></input>
+           <input type="text" name="exercises" aria-label="exercises" value={formData.exercises} onChange={handleChange} ></input>
            
            <label>Notes:</label>
-           <input type="text" name="note" aria-label="note" value={formData.note} onChange={handleChange} ></input>
+           <input type="text" name="notes" aria-label="notes" value={formData.notes} onChange={handleChange} ></input>
           
            <input class="submit" type="submit" />
-          
-       </form>
+        
+           
+      </form>
+    
        </FormContainer>
     )
 }
@@ -88,6 +91,16 @@ margin:auto;
 & input[type=submit] {
   width: 40%;
   background-color: #4E0099;
+  color: white;
+  padding: 10px 16px ;
+  margin: 6px 0;
+  border: none;
+  border-radius: 4px;
+  
+}
+& input[type=submit]:hover {
+  width: 40%;
+  background-color: #996DEC;
   color: white;
   padding: 10px 16px ;
   margin: 6px 0;

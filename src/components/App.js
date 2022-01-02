@@ -20,6 +20,9 @@ function App() {
   const[searchTerm,setSearchTerm]=useState("");
   const[plans,setPlans]=useState([]);
   
+  useEffect(() => {
+    document.title = "My Fitness"
+ }, []);
   
   useEffect(() => {
     fetch(exerciseApi)

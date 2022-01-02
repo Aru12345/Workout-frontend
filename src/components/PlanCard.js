@@ -24,11 +24,12 @@ export default PlanCard;
 const PlanList=styled.div`
 display: inline-block;
 text-align: center;
-width: 250px;
-height: 290px;
-margin:25px;
+width: 480px;
+height: 240px;
 margin-top: 70px;
 padding:15px ;
+margin-bottom:25px;
+margin-left:35px;
 
 box-shadow: 10px 10px 8px #888888;
 border-radius:5px;
