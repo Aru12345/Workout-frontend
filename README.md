@@ -1,5 +1,9 @@
 <h2>My Fitness App</h2>
 
+## Demo
+
+![gif](https://i.postimg.cc/GpSbTzKp/Screen-Recording-2022-01-03-at-5-13-05-PM-1.gif)
+
 ## Introduction
 
 Welcome to My Fitness, a workout site for finding exercises to do.
@@ -12,9 +16,6 @@ state is quite common.The application is designed using style components.
 
 Here is a video walkthrough of the app [Link to Walkthrough](https://www.youtube.com/watch?v=SHx1Rzc2oZ8&t=18s)
 # Getting Started with Create React App
-
-
-![gif](https://i.postimg.cc/GpSbTzKp/Screen-Recording-2022-01-03-at-5-13-05-PM-1.gif)
 
 ## Setup
 
@@ -34,8 +35,6 @@ As a user:
 2. I can use the Search bar to search for any exercise out of the listins.
 3. I can create my own workout plan and see it posted.
 4. I can use the Utilities in my App.
-
-
 
 
 
