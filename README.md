@@ -14,7 +14,7 @@ Here is a video walkthrough of the app [Link to Walkthrough](https://www.youtube
 # Getting Started with Create React App
 
 
-![gif](https://ibb.co/ChzDc6N)
+![gif](https://i.postimg.cc/GpSbTzKp/Screen-Recording-2022-01-03-at-5-13-05-PM-1.gif)
 
 ## Setup
 
