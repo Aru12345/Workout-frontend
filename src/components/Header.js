@@ -24,44 +24,16 @@ function Header(props) {
   return (
     <HeaderContainer>
     <h1>Welcome to My Fitness</h1>
-    <NavLink
-        to="/"
-        exact
-        
-        style={linkStyles}
-        activeStyle={{
-          background: "#4E0099",
-        }}
-      >
+    <NavLink to="/" exact style={linkStyles} activeStyle={{background: "#4E0099",}}>
         Home
-      </NavLink>
-      <NavLink
-        to="/exercises"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "#4E0099",
-        }}
-      >Search Exercises
-      </NavLink>
-      <NavLink
-        to="/plans/new"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "#4E0099",
-        }}
-      >
+    </NavLink>
+    <NavLink to="/exercises" exact style={linkStyles} activeStyle={{ background: "#4E0099", }}>
+      Search Exercises
+   </NavLink>
+  <NavLink to="/plans/new" exact  style={linkStyles} activeStyle={{ background: "#4E0099",}}>
         Build Your Workout
-      </NavLink>
-      <NavLink
-        to="/utilities/new"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "#4E0099",
-        }}
-      >
+   </NavLink>
+    <NavLink to="/utilities/new" exact style={linkStyles} activeStyle={{ background: "#4E0099", }}  >
          Use Utilities
       </NavLink>
 

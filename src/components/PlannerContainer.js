@@ -9,8 +9,6 @@ function PlanContainer({listedPlans}){
           <PlanCard
             key={listedPlan.id}
             listedPlan={listedPlan}
-            
-            
           />
         );
       })}
