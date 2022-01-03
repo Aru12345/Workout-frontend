@@ -14,6 +14,8 @@ Here is a video walkthrough of the app [Link to Walkthrough](https://www.youtube
 # Getting Started with Create React App
 
 
+![gif](https://ibb.co/ChzDc6N)
+
 ## Setup
 
 1. Run `npm install` in your terminal.
