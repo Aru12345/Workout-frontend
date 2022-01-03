@@ -1,3 +1,11 @@
+<h2>My Fitness App</h2>
+
+## Instructions
+
+Welcome to My Fitness, a workout site for finding exercises to do.
+You can navigate through the app searching which exercise you would like to do.
+Make your own workout plans and Use Utilities to check your BMI and stuff
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
